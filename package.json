@@ -2,7 +2,7 @@
   "name": "docs.github.com",
   "private": true,
   "repository": "https://github.com/github/docs",
-  "license": "(MIT AND CC-BY-4.0)",
+  "license": "(MIT AND )",
   "author": {
     "name": "GitHub",
     "email": "opensource+docs@github.com",
@@ -94,7 +94,7 @@
     "combine-link-reports": "tsx src/links/scripts/combine-link-reports.ts",
     "check-links-external": "tsx src/links/scripts/check-links-external.ts",
     "rest-dev": "tsx src/rest/scripts/update-files.ts",
-    "show-action-deps": "echo 'Action Dependencies:' && rg '^[\\s|-]*(uses:.*)$' .github -I -N --no-heading -r '$1$2' | sort | uniq | cut -c 7-",
+    "show-action-deps": "echo 'Action Dependencies:' && rg '^[\\s|-]*(uses:)$' .github -I -N --no-heading -r '$1$2' | sort | uniq | cut -c 7-",
     "start": "cross-env NODE_ENV=development ENABLED_LANGUAGES=en nodemon src/frame/server.ts",
     "start-all-languages": "cross-env NODE_ENV=development tsx src/frame/server.ts",
     "start-for-ci": "cross-env NODE_ENV=production ENABLED_LANGUAGES=en tsx src/frame/server.ts",
